@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js">
+
+    </script>
+    <title></title>
+  </head>
+  <body style="font-family:sans-serif">
+    <div class="task" id="task1">
+      <h1>Multiplication</h1>
+      <br>
+      <b>1st Input: </b><input id="mult_1" type="text" value="0">
+      <br>
+      <br>
+      <b>2nd Input: </b><input id="mult_2" type="text" value="0">
+      <br>
+      <br>
+      <div class="">
+        <button type="button" onclick="multiply()">Multiply</button>
+        <button type="button" onclick="divide()">Divide</button>
+      </div>
+      <br>
+      <br>
+      <b id="mult_result">Result: </b>
+    </div>
+    <br>
+    <div class="task" id="task2">
+      <h1>Celsius - Fahrenheit</h1>
+      <br>
+      <b>Celsius: </b><input id="celsius" type="text" oninput="toFahrenheit()" value="0">
+      <br>
+      <br>
+      <b>Fahrenheit: </b><input id="fahren" type="text" oninput="toCelsius()" value="0">
+    </div>
+    <br>
+    <div class="task" id="task3">
+      <h1>Volume of sphere</h1>
+      <br>
+      <b>Radius: </b><input id="radius" type="text" value="0">
+      <br>
+      <br>
+      <div class="">
+        <button type="button" onclick="calculateVolume()">Calculate</button>
+      </div>
+      <br>
+      <br>
+      <b id="volume_result">Result: </b>
+    </div>
+    <br>
+    <div class="task" id="task4">
+      <h1>Reverse string</h1>
+      <br>
+      <b>String to reverse: </b><input id="string" type="text">
+      <br>
+      <br>
+      <div class="">
+        <button type="button" onclick="reverseString()">Reverse</button>
+      </div>
+      <br>
+      <br>
+      <b id="reverse_result">Result: </b>
+    </div>
+    <br>
+    <canvas id="myCanvas_1" width="300" height="300" style="border:3px solid #000000;">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <canvas id="myCanvas_2" width="300" height="300" style="border:3px solid #000000;">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+      <br>
+    <canvas id="myCanvas_3" width="600" height="600" style="border:3px solid #000000;">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+    <script type="text/javascript">
+    var c = document.getElementById("myCanvas_1");
+    var ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.lineWidth = "30";
+    ctx.strokeStyle = "black";
+    ctx.rect(75, 75, 150, 150);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.lineWidth = "3";
+    ctx.strokeStyle = "black";
+    ctx.rect(95, 95, 110, 110);
+    ctx.stroke();
+
+    c = document.getElementById("myCanvas_2");
+    ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.lineWidth = "3"
+    ctx.arc(150, 150, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    c = document.getElementById("myCanvas_3");
+    ctx = c.getContext("2d");
+
+    for(i=0;i<6;i++){
+      ctx.beginPath();
+      ctx.lineWidth = "3";
+      ctx.strokeStyle = "black";
+      if(i===0){
+        ctx.fillStyle = '#ffffff';
+      }
+      if(i===1){
+        ctx.fillStyle = '#c7c7c7';
+      }
+      if(i===2){
+        ctx.fillStyle = '#999999';
+      }
+      if(i===3){
+        ctx.fillStyle = '#666666';
+      }
+      if(i===4){
+        ctx.fillStyle = '#313131';
+      }
+      if(i===5){
+        ctx.fillStyle = '#000000';
+      }
+      ctx.arc(60+(i*100), 60+(i*100), 30, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+body{
+  margin: 50px;
+  line-height: 30px;
+}
+.task{
+  text-align: center;
+  margin:auto;
+  width: 20%;
+  border: 3px solid #000000;
+  padding: 20px;
+  line-height: 20px;
+}
+}
+.task h1{
+  font-size: 25px;
+}
